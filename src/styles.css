@@ -9,12 +9,7 @@ body {
   padding: 0;
   margin: 0;
 }
-#root {
-  width: 100vw;
-  height: 100vh;
-  color: #2a2223;
-  margin: 0;
-}
+
 h1 {
   color: black;
   font-size: 50px;
@@ -31,6 +26,15 @@ h1 {
 .logo {
   width: 250px;
 }
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.movie-card {
+  margin: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+}
 h2 {
   color: #474747;
   font-size: 25px;
@@ -45,25 +49,11 @@ h2 {
   margin: 20px auto;
   max-width: 900px;
 }
-.film-list {
-  background: #bcc8c1;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-}
+
 p {
   padding: 10px;
 }
-p:nth-child(2) {
-  padding: 10px;
-  font-size: 18px;
-  display: block; /* or inline-block */
-  text-overflow: ellipsis;
-  word-wrap: no-wrap;
-  overflow: hidden;
-  max-height: 10em;
-  line-height: 1.2em;
-}
+
 @media (max-width: 580px) {
   .film-list {
     align-self: center;
