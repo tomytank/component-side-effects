@@ -20,6 +20,10 @@ function App() {
     console.log("State Other Changed");
   }, [otherState]);
 
+  useEffect(() => {
+    console.log("ANY state changes");
+  }, [state, otherState]);
+
   return (
     <div className="App">
       <div className="logo_container">
