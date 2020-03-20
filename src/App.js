@@ -9,7 +9,15 @@ function App() {
   const [otherState, setOtherState] = useState("dan");
 
   useEffect(() => {
-    console.log("In our effect!");
+    console.log("Component mounted!");
+  }, []);
+
+  useEffect(() => {
+    console.log("State count changed!");
+  }, [state]);
+
+  useEffect(() => {
+    console.log("State Other Changed");
   }, [otherState]);
 
   return (
