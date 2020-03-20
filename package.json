@@ -1,10 +1,11 @@
 {
-  "name": "component-side-effects",
+  "name": "component-side-effects-wpt14-df",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "axios": "latest",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-scripts": "3.0.1"
