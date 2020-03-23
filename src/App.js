@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import MoviesList from "./components/MoviesList";
 //import MoviesList from "./components/MoviesList";
 import logo from "./assets/logo.png";
 import "./styles.css";
@@ -8,9 +8,9 @@ function App() {
   const [count, setCount] = useState(0);
   const [countLevel, setCountLevel] = useState("Low");
 
-  useEffect(() => {
-    console.log("Component mounted!");
-  }, []);
+  // useEffect(() => {
+  //   console.log("Component mounted!");
+  // }, []);
 
   useEffect(() => {
     console.log("State count changed!");
@@ -26,9 +26,9 @@ function App() {
     }
   }, [count]);
 
-  useEffect(() => {
-    console.log("State countLevel Changed");
-  }, [countLevel]);
+  // useEffect(() => {
+  //   console.log("State countLevel Changed");
+  // }, [countLevel]);
 
   // useEffect(() => {
   //   console.log("ANY state changes");
@@ -47,6 +47,7 @@ function App() {
         >
           {count} times
         </button>
+        <MoviesList />
       </div>
     </div>
   );
