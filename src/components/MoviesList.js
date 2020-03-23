@@ -1,24 +1,22 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios from "axios"; //without a file structure coming from dependencies
 
 import MovieCard from "./MovieCard";
 
 function MoviesList() {
   const [movies, setMovies] = useState([]);
-
   useEffect(() => {
     axios.get("https://ghibliapi.herokuapp.com/films").then(response => {
       setMovies(response.data);
     });
   }, []);
-
   useEffect(() => {
     console.log("Movies has changed!", movies);
   }, [movies]);
   // Call an API and get data about movies
   // for each movie we want to create a new component to display that data
   return (
-    <div>
+    <div className="">
       <ul>
         {movies.map(movie => {
           return (
