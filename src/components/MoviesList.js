@@ -6,12 +6,16 @@ import MovieCard from "./MovieCard";
 function MoviesList() {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
-    axios.get("https://ghibliapi.herokuapp.com/films").then(response => {
-      setMovies(response.data);
-    });
-  }, []);
+    axios
+      .get("https://ghibliapi.herokuapp.com/films")
+      .then(response => {
+        setMovies(response.data);
+      })
+      .catch(error => [console.log("The data was not returned ", error)]);
+  }, []); //is only called once!
   useEffect(() => {
     console.log("Movies has changed!", movies);
+    return () => {};
   }, [movies]);
   // Call an API and get data about movies
   // for each movie we want to create a new component to display that data
